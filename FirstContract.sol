@@ -3,7 +3,7 @@
 pragma solidity >=0.7.0 <0.9.0;
 
 /**
- * @title MyContract
+ * @title FirstContract
  * @dev Exploring different types of state variables
  */
 contract FirstContract {
