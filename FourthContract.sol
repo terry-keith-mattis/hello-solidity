@@ -8,7 +8,7 @@ pragma solidity >=0.7.0 <0.9.0;
  */
 contract FourthContract {
     
-    uint[] public numbers = [10,20,30,40,50,60,70,80,90,100];
+    uint[] public numbers = [11,20,31,40,51,60,71,80,91,100];
     
     function countOddNumbers() public view returns (uint) {
         uint count = 0;
