@@ -8,14 +8,20 @@ pragma solidity >=0.7.0 <0.9.0;
  */
 contract FourthContract {
     
-    uint[] public numbers = [11,20,31,40,51,60,71,80,91,100];
+    address public owner;
+    
+    constructor() {
+        owner=msg.sender;
+    }
+    
+    uint[] public numbers = [11,21,31,40,51,60,71,80,91,100];
     
     function countOddNumbers() public view returns (uint) {
         uint count = 0;
 
         for(uint i = 0; i < numbers.length; i++) {
             if ( isOddNumber(numbers[i])) {
-                count = count + numbers[i];
+                count = count + 1;
             }
  
         }
@@ -29,6 +35,10 @@ contract FourthContract {
        else {
            return false;
        }
+   }
+   
+   function isOwner() public view returns(bool) {
+       return(msg.sender == owner);
    }
    
 }
